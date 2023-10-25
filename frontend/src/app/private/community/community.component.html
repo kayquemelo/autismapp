@@ -1,0 +1,8 @@
+<div class="grid xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-4">
+   <div *ngFor="let item of foruns" class="w-full backdrop-blur-lg bg-white/50 rounded-md shadow p-2 flex flex-col">
+      <h1 class="text-white font-semibold">{{item.title}}</h1>
+      <a href="{{item.desc}}" target="_blank">
+         <div class="bg-transparent h-[300px] rounded-md" style="background-image: url({{item.image}}); background-size: cover; background-repeat: no-repeat; background-position: center;"></div>
+      </a>
+   </div>
+</div>

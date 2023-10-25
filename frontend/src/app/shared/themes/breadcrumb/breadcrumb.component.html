@@ -1,0 +1,22 @@
+<nav class="flex justify-between items-center p-4" aria-label="Breadcrumb">
+    <ol class="inline-flex items-center space-x-1 md:space-x-3">
+        <li class="inline-flex items-center">
+            <a href="/user" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600">
+                home
+            </a>
+        </li>
+        <li *ngFor="let item of breadLabel">
+            <div class="flex items-center">
+                <i class="bi bi-chevron-right"></i>
+                <a [routerLink]="item.route" class="ml-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ml-2">{{item.label}}</a>
+            </div>
+        </li>
+    </ol>
+    <div class="flex gap-3">
+        <i class="bi bi-bell-fill hover:scale-125 hover:text-blue-600 duration-150 cursor-pointer text-lg"></i>
+
+        <i class="bi bi-person-fill hover:scale-125 hover:text-blue-600 duration-150 cursor-pointer text-lg"></i>
+        
+        <i class="bi bi-box-arrow-right hover:scale-125 hover:text-red-600 duration-150 cursor-pointer text-lg"></i> 
+    </div>
+</nav>

@@ -1,0 +1,10 @@
+<main class="w-full flex flex-col gap-4">
+    <div *ngFor="let item of youtubeVideo" class="w-full backdrop-blur-lg bg-white/50 rounded-md shadow p-2 flex flex-col">
+        <div class="p-2 items-center justify-center flex w-full">
+            <h1 class="text-white font-semibold">{{item.title}}</h1>
+        </div>
+        <div class="w-full items-center justify-center flex">
+            <iframe class="rounded-md w-full h-[400px]" [src]="item.link" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</main>

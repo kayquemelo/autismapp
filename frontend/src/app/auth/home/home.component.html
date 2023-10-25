@@ -1,0 +1,51 @@
+<main class="flex w-full h-[100vh] max-h-[100vh]">
+    <div class="flex flex-col items-center bg-transparent justify-center gap-8 lg:w-[100%] md:w-[100%] w-[100%] h-[100vh]">
+        <div class="flex flex-col justify-end w-full">
+            <div class="w-full">
+                <div class="flex flex-col items-center justify-center px-6 py-4 mx-auto lg:py-0">
+                    <a routerLink="/login" class="flex items-center mb-6 text-2xl font-semibold text-white">
+                        AutismApp
+                    </a>
+                    <div class="w-full backdrop-blur-lg bg-white/50 rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0">
+                        <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                            <h1 class="text-xl font-bold leading-tight tracking-tight text-white md:text-2xl">
+                                Faça login em sua conta
+                            </h1>
+                            <form class="space-y-4 md:space-y-6">
+                                <div>
+                                    <label for="usuario" class="block mb-2 text-sm font-medium text-white">Usuario</label>
+                                    <input [(ngModel)]="username" name="username" type="text" id="usuario"
+                                        class="backdrop-blur-sm bg-white/10 border border-gray-300 text-white sm:text-sm rounded-lg focus:ring-white focus:border-white block w-full p-2.5"
+                                        placeholder="ex: dorothy.oz" required="" maxlength="20">
+                                </div>
+                                <div>
+                                    <label for="senha" class="block mb-2 text-sm font-medium text-white">Senha</label>
+                                    <input [(ngModel)]="password" name="password" type="password" id="senha" placeholder="••••••••"
+                                        class="backdrop-blur-sm bg-white/10 border border-gray-300 text-white sm:text-sm rounded-lg focus:ring-white focus:border-white block w-full p-2.5"
+                                        required="" maxlength="50">
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-start">
+                                        <div class="flex items-center h-5">
+                                            <input id="remember" aria-describedby="remember" type="checkbox" value=""
+                                                class="w-4 h-4 border border-gray-300 rounded backdrop-blur-sm bg-white/10 focus:ring-3 focus:ring-primary-300" required="">
+                                        </div>
+                                        <div class="ml-3 text-sm">
+                                            <label for="remember" class="text-white">Lembrar login</label>
+                                        </div>
+                                    </div>
+                                    <a routerLink="/forget" class="text-sm font-medium text-white hover:underline">Esqueceu sua senha?</a>
+                                </div>
+                                <button type="submit" (click)="submitLogin()"
+                                    class="w-full text-white bg-[#0369a1] hover:bg-[#4A3FA2] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center duration-300">Entrar</button>
+                                <p class="text-sm font-light text-white">Não tem uma conta ainda? <a routerLink="/register"
+                                        class="font-semibold text-white hover:underline">Registre-se</a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

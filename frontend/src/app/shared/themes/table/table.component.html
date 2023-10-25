@@ -1,0 +1,22 @@
+<div class="relative border">
+  <div class="relative overflow-auto lg:overflow-y-none md:overflow-none">
+    <table class="table-auto w-full text-sm text-left text-slate-600 lg:mb-0 mb-16">
+      <thead class="text-xs text-slate-950 border-b drop-shadow uppercase bg-white z-40">
+        <tr>
+          <th *ngFor="let header of headers" class="text-sm px-4 py-3">
+            <ng-container *ngTemplateOutlet="header">
+            </ng-container>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rowData of dataset" class="bg-white border-b lg:hover:bg-slate-50 lg:hover:text-black md:hover:bg-gray-100 md:hover:text-black hover:duration-200">
+          <td *ngFor="let column of columns" class="px-4 py-3">
+            <ng-container *ngTemplateOutlet="column; context: { rowData }">
+            </ng-container>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
